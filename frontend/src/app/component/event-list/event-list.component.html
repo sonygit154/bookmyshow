@@ -1,0 +1,27 @@
+<div class="eventlist-container">
+  <h2>Events</h2>
+
+  <div class="controls">
+    <input type="text" placeholder="Search events..." [(ngModel)]="searchQuery" (keyup)="searchEvents()" />
+    <select [(ngModel)]="filterCategory" (change)="filterByCategory(filterCategory)">
+      <option value="all">All Categories</option>
+      <option value="Concert">Concert</option>
+      <option value="EDM">EDM</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Talks">Talks</option>
+    </select>
+  </div>
+
+  <div class="grid">
+    <div class="event-card" *ngFor="let e of filteredEvents">
+      <img [src]="e.image" alt="{{ e.title }}">
+      <div class="event-body">
+        <h3>{{ e.title }}</h3>
+        <p class="meta">{{ e.category }} · {{ e.date }} · {{ e.time }} · {{ e.venue }}</p>
+        <p>{{ e.description }}</p>
+        <p class="price">₹{{ e.price }}</p>
+        <button (click)="bookEvent(e)">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>
