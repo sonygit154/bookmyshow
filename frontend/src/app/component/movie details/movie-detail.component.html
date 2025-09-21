@@ -1,0 +1,36 @@
+<div class="movie-detail">
+  <div class="header">
+    <img [src]="movie.img" [alt]="movie.title">
+    <div class="info">
+      <h2>{{ movie.title }}</h2>
+      <p>{{ movie.genre }} · {{ movie.lang }}</p>
+      <p>{{ movie.desc }}</p>
+    </div>
+  </div>
+
+  <div class="showtimes">
+    <h3>Select Showtime:</h3>
+    <div class="times">
+      <button *ngFor="let t of movie.times" [class.selected]="selectedTime===t" (click)="selectedTime=t">{{ t }}</button>
+    </div>
+  </div>
+
+  <div class="seating">
+    <h3>Select Seats (200+ seats available)</h3>
+    <div class="seat-grid">
+      <div *ngFor="let seat of seats" 
+           class="seat" 
+           [class.booked]="seat.booked" 
+           [class.selected]="selectedSeats.includes(seat)"
+           (click)="toggleSeat(seat)">
+        {{ seat.row + seat.number }}
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <p>Selected Seats: {{ selectedSeats.map(s => s.row + s.number).join(', ') || 'None' }}</p>
+    <button (click)="proceedBooking()" [disabled]="!selectedSeats.length || !selectedTime">Confirm Booking</button>
+  </div>
+</div>
+
