@@ -1,0 +1,52 @@
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.seat {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.seat.available {
+  background: #2ecc71; /* green */
+}
+
+.seat.selected {
+  background: #ff3b3f; /* red */
+}
+
+.seat.booked {
+  background: #7f8c8d; /* gray */
+  cursor: not-allowed;
+}
+
+.legend {
+  margin-top: 10px;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.legend .seat {
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+}

@@ -1,0 +1,16 @@
+<div class="seat-container">
+  <div class="row" *ngFor="let r of [].constructor(rows); let i = index">
+    <div 
+      *ngFor="let seat of getSeatsByRow(i+1)" 
+      class="seat" 
+      [ngClass]="seat.status"
+      (click)="toggleSeat(seat)">
+      {{seat.number}}
+    </div>
+  </div>
+</div>
+<div class="legend">
+  <span class="seat available"></span> Available
+  <span class="seat selected"></span> Selected
+  <span class="seat booked"></span> Booked
+</div>
