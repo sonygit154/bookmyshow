@@ -1,0 +1,26 @@
+<div class="event-detail" *ngIf="event">
+  <div class="image">
+    <img [src]="event.image" [alt]="event.title">
+  </div>
+
+  <div class="details">
+    <h2>{{ event.title }}</h2>
+    <p class="meta">{{ event.category }} · {{ event.date }} · {{ event.time }} · {{ event.venue }}</p>
+    <p class="description">{{ event.description }}</p>
+    <p class="price">Price per seat: ₹{{ event.price }}</p>
+
+    <div class="seats-control">
+      <button (click)="decrementSeats()">-</button>
+      <span>{{ seats }}</span>
+      <button (click)="incrementSeats()">+</button>
+    </div>
+
+    <button class="book-btn" (click)="bookEvent()">Book Now</button>
+  </div>
+</div>
+
+<div *ngIf="!event" class="no-event">
+  <p>No event selected.</p>
+</div>
+
+
