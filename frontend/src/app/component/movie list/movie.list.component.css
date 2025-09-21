@@ -1,0 +1,58 @@
+/* Movie List Page Styles */
+
+.movie-list-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-list-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e50914;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.movie-info {
+  padding: 12px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-info h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom

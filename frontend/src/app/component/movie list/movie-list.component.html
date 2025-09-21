@@ -1,0 +1,16 @@
+<div class="movie-list">
+  <h2>Now Showing / Coming Soon</h2>
+  <div class="grid">
+    <div class="movie-card" *ngFor="let movie of movies">
+      <img [src]="movie.img" [alt]="movie.title">
+      <div class="info">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.genre }} · {{ movie.lang }}</p>
+        <p>{{ movie.desc }}</p>
+      </div>
+      <div class="actions">
+        <button (click)="viewDetails(movie)">View Details / Book</button>
+      </div>
+    </div>
+  </div>
+</div>
