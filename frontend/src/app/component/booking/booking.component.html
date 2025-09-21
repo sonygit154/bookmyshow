@@ -1,0 +1,42 @@
+
+<div class="booking-container" *ngIf="item">
+  <h2>Book: {{ item.title }}</h2>
+
+  <div class="times">
+    <label>Select Show Time:</label>
+    <div class="time" *ngFor="let t of item.times" [class.selected]="selectedTime === t" (click)="selectTime(t)">
+      {{ t }}
+    </div>
+  </div>
+
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Number of Seats</label>
+      <input type="number" formControlName="seats" min="1" />
+      <div class="error" *ngIf="submitted && f.seats.errors">
+        <small *ngIf="f.seats.errors.required">Seats required.</small>
+        <small *ngIf="f.seats.errors.min">At least 1 seat required.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Payment Method</label>
+      <select formControlName="paymentMethod">
+        <option value="CARD">Card</option>
+        <option value="UPI">UPI</option>
+        <option value="NETBANKING">NetBanking</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>Total Amount: ₹{{ item.price * bookingForm.value.seats }}</p>
+    </div>
+
+    <button type="submit">Proceed to Pay</button>
+  </form>
+
+  <div class="success" *ngIf="paymentSuccess">
+    <p>Payment Successful! Booking Confirmed ✅</p>
+    <button (click)="resetBooking()">Book Another</button>
+  </div>
+</div>
