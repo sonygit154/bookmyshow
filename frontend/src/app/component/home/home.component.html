@@ -1,0 +1,16 @@
+<div class="home-container">
+  <h1>BookMyShow</h1>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search movies, events..." [(ngModel)]="searchQuery">
+  </div>
+
+  <div class="category" *ngFor="let cat of categories">
+    <h2>{{ cat | titlecase }}</h2>
+    <div class="grid">
+      <div class="card" *ngFor="let item of getFilteredItems(cat)">
+        <img [src]="item.img" [alt]="item.title">
+        <div class="info">
+          <h3>{{ item.title }}</h3>
+          <p class="desc">{{ item.desc }}</p>
+          <button (click)="bookIte
