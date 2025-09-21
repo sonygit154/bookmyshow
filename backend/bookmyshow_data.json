@@ -1,0 +1,57 @@
+{
+  "users": [
+    {"userId": "U001","name": "Amit Sharma","email": "amit@example.com","password": "hashed_password","phone": "9876543210"},
+    {"userId": "U002","name": "Priya Verma","email": "priya@example.com","password": "hashed_password","phone": "9123456780"},
+    {"userId": "U003","name": "Rohit Singh","email": "rohit@example.com","password": "hashed_password","phone": "9988776655"}
+  ],
+
+  "movies": [
+    {"movieId": "M001","title": "Jawan","language": "Hindi","genre": ["Action","Drama"],"duration": 165,"releaseDate": "2023-09-07","rating": 4.5,"posterUrl": "/images/movies/jawan.jpg","bannerUrl": "/images/banners/jawan-banner.jpg","description": "High-octane action thriller starring Shah Rukh Khan."},
+    {"movieId": "M002","title": "Oppenheimer","language": "English","genre": ["Biography","Drama"],"duration": 180,"releaseDate": "2023-09-10","rating": 4.8,"posterUrl": "/images/movies/oppenheimer.jpg","bannerUrl": "/images/banners/oppenheimer-banner.jpg","description": "The story of J. Robert Oppenheimer, the father of the atomic bomb."},
+    {"movieId": "M003","title": "Gadar 2","language": "Hindi","genre": ["Action","Drama"],"duration": 155,"releaseDate": "2023-08-15","rating": 4.2,"posterUrl": "/images/movies/gadar2.jpg","bannerUrl": "/images/banners/gadar2-banner.jpg","description": "Sequel to blockbuster hit Gadar: Ek Prem Katha."},
+    {"movieId": "M004","title": "Avatar 3","language": "English","genre": ["Sci-Fi","Adventure"],"duration": 190,"releaseDate": "2023-12-01","rating": 4.7,"posterUrl": "/images/movies/avatar3.jpg","bannerUrl": "/images/banners/avatar3-banner.jpg","description": "The next chapter in the Avatar saga."},
+    {"movieId": "M005","title": "Pathaan","language": "Hindi","genre": ["Action","Thriller"],"duration": 165,"releaseDate": "2023-08-30","rating": 4.6,"posterUrl": "/images/movies/pathaan.jpg","bannerUrl": "/images/banners/pathaan-banner.jpg","description": "Spy thriller starring Shah Rukh Khan."},
+    {"movieId": "M006","title": "Barbie","language": "English","genre": ["Comedy","Fantasy"],"duration": 120,"releaseDate": "2023-07-21","rating": 4.1,"posterUrl": "/images/movies/barbie.jpg","bannerUrl": "/images/banners/barbie-banner.jpg","description": "Fun fantasy adventure for all ages."},
+    {"movieId": "M007","title": "Dunki","language": "Hindi","genre": ["Drama"],"duration": 150,"releaseDate": "2023-09-15","rating": 4.3,"posterUrl": "/images/movies/dunki.jpg","bannerUrl": "/images/banners/dunki-banner.jpg","description": "Drama movie starring Shah Rukh Khan."},
+    {"movieId": "M008","title": "Mission Impossible 7","language": "English","genre": ["Action","Thriller"],"duration": 170,"releaseDate": "2023-09-20","rating": 4.5,"posterUrl": "/images/movies/mi7.jpg","bannerUrl": "/images/banners/mi7-banner.jpg","description": "Ethan Hunt returns for more action."},
+    {"movieId": "M009","title": "Spider-Man: Across the Spider-Verse","language": "English","genre": ["Animation","Action"],"duration": 140,"releaseDate": "2023-06-10","rating": 4.8,"posterUrl": "/images/movies/spiderman.jpg","bannerUrl": "/images/banners/spiderman-banner.jpg","description": "Animated Spider-Man multiverse adventure."},
+    {"movieId": "M010","title": "The Kerala Story","language": "Hindi","genre": ["Drama"],"duration": 130,"releaseDate": "2023-03-25","rating": 4.0,"posterUrl": "/images/movies/kerala.jpg","bannerUrl": "/images/banners/kerala-banner.jpg","description": "Drama based on real events in Kerala."}
+  ],
+
+  "events": [
+    {"eventId": "E001","title": "Arijit Singh Live Concert","category": "Concert","language": "Hindi","date": "2023-10-12","time": "19:00","venue": "NSCI Dome, Mumbai","priceRange": [1500,5000],"posterUrl": "/images/events/arijit.jpg","bannerUrl": "/images/banners/arijit-banner.jpg","description": "Experience Arijit Singh performing his soulful hits live."},
+    {"eventId": "E002","title": "Zakir Khan Standup Show","category": "Comedy","language": "Hindi","date": "2023-11-05","time": "18:00","venue": "Prithvi Theatre, Mumbai","priceRange": [800,2500],"posterUrl": "/images/events/zakir.jpg","bannerUrl": "/images/banners/zakir-banner.jpg","description": "Laugh out loud with Zakir Khan's hilarious performances."},
+    {"eventId": "E003","title": "IPL Final 2023","category": "Sports","language": "English","date": "2023-10-15","time": "15:00","venue": "Wankhede Stadium, Mumbai","priceRange": [1000,10000],"posterUrl": "/images/events/ipl.jpg","bannerUrl": "/images/banners/ipl-banner.jpg","description": "Exciting IPL final match."},
+    {"eventId": "E004","title": "Shreya Ghoshal Live","category": "Concert","language": "Hindi","date": "2023-12-01","time": "19:30","venue": "Dome, Mumbai","priceRange": [1200,4500],"posterUrl": "/images/events/shreya.jpg","bannerUrl": "/images/banners/shreya-banner.jpg","description": "Live concert by Shreya Ghoshal."},
+    {"eventId": "E005","title": "Comedy Nights with Kapil","category": "Comedy","language": "Hindi","date": "2023-11-25","time": "20:00","venue": "Film City, Mumbai","priceRange": [700,2500],"posterUrl": "/images/events/kapil.jpg","bannerUrl": "/images/banners/kapil-banner.jpg","description": "Kapil Sharma live comedy show."}
+  ],
+
+  "venues": [
+    {"venueId": "V001","name": "PVR Cinemas, Andheri","type": "Cinema","location": "Mumbai, Maharashtra","screens": ["Screen 1","Screen 2","Screen 3"]},
+    {"venueId": "V002","name": "INOX, Malad","type": "Cinema","location": "Mumbai, Maharashtra","screens": ["Screen 1","Screen 2"]},
+    {"venueId": "V003","name": "Cinepolis, Mumbai Central","type": "Cinema","location": "Mumbai, Maharashtra","screens": ["Screen 1","Screen 2","Screen 3"]},
+    {"venueId": "V004","name": "NSCI Dome, Mumbai","type": "Event Hall","location": "Mumbai, Maharashtra","screens": ["Main Hall"]},
+    {"venueId": "V005","name": "Prithvi Theatre, Mumbai","type": "Event Hall","location": "Mumbai, Maharashtra","screens": ["Main Hall"]}
+  ],
+
+  "showtimes": [
+    {"showId": "S001","movieId": "M001","venueId": "V001","screen": "Screen 1","date": "2023-09-09","time": "18:30","price": 250,"availableSeats": 100},
+    {"showId": "S002","movieId": "M002","venueId": "V002","screen": "Screen 1","date": "2023-09-10","time": "20:00","price": 350,"availableSeats": 80},
+    {"showId": "S003","movieId": "M003","venueId": "V001","screen": "Screen 2","date": "2023-09-08","time": "17:00","price": 200,"availableSeats": 90},
+    {"showId": "S004","movieId": "M004","venueId": "V003","screen": "Screen 3","date": "2023-12-05","time": "19:00","price": 400,"availableSeats": 120},
+    {"showId": "S005","movieId": "M005","venueId": "V001","screen": "Screen 2","date": "2023-09-15","time": "21:00","price": 300,"availableSeats": 100}
+  ],
+
+  "seats": [
+    {"seatId": "ST001","showId": "S001","seatNumber": "A1","type": "Gold","price": 250,"isBooked": false},
+    {"seatId": "ST002","showId": "S001","seatNumber": "A2","type": "Gold","price": 250,"isBooked": false},
+    {"seatId": "ST003","showId": "S001","seatNumber": "A3","type": "Gold","price": 250,"isBooked": true},
+    {"seatId": "ST004","showId": "S002","seatNumber": "B1","type": "Silver","price": 200,"isBooked": false},
+    {"seatId": "ST005","showId": "S002","seatNumber": "B2","type": "Silver","price": 200,"isBooked": true}
+  ],
+
+  "bookings": [
+    {"bookingId": "B001","userId": "U001","showId": "S001","seats": ["A1","A2"],"totalAmount": 500,"bookingDate": "2023-09-07","status": "Confirmed"},
+    {"bookingId": "B002","userId": "U002","showId": "S003","seats": ["A1"],"totalAmount": 200,"bookingDate": "2023-09-07","status": "Confirmed"}
+  ]
+}
