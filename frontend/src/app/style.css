@@ -1,0 +1,344 @@
+/* ================================
+   Global Variables
+================================= */
+body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background: #e50914;
+      color: white;
+      margin: 0;
+    }
+    .section {
+      padding: 20px;
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      width: 200px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .card h3 {
+      padding: 10px;
+      margin: 0;
+      background: #222;
+      color: white;
+    }
+    
+:root {
+  --primary-color: #ff3b3f;
+  --secondary-color: #061428;
+  --card-color: #071724;
+  --text-color: #E6F0FA;
+  --muted-color: #98a0b3;
+  --radius: 12px;
+  --max-width: 1200px;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+/* ================================
+   Reset & Global Styles
+================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--secondary-color), #02131d);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ================================
+   Layout & Containers
+================================= */
+.app {
+  max-width: var(--max-width);
+  margin: 20px auto;
+  padding: 18px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff6b6b, var(--primary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  font-size: 24px;
+}
+
+/* ================================
+   Buttons & Pills
+================================= */
+.btn {
+  background: var(--primary-color);
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--muted-color);
+}
+
+/* Pills */
+.pill {
+  background: linear-gradient(90deg, #07122988, rgba(255, 255, 255, 0.02));
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--muted-color);
+}
+
+/* ================================
+   Cards & Grid
+================================= */
+.card {
+  background: var(--card-color);
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #071022, #05111a);
+}
+
+.thumb {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.item-body {
+  padding: 10px;
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.meta, .desc {
+  color: var(--muted-color);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* ================================
+   Filters
+================================= */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--muted-color);
+  cursor: pointer;
+}
+
+.chip.active {
+  background: rgba(255, 59, 63, 0.08);
+  color: var(--primary-color);
+  border-color: rgba(255, 59, 63, 0.12);
+}
+
+/* ================================
+   Modal
+================================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.modal {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(180deg, #061425, #061a2a);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.times {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.time {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  color: var(--muted-color);
+}
+
+.time.selected {
+  background: rgba(255, 59, 63, 0.12);
+  color: var(--primary-color);
+  border-color: rgba(255, 59, 63, 0.12);
+}
+
+/* ================================
+   Forms
+================================= */
+.form-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  padding: 8px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-color);
+  outline: none;
+}
+
+label {
+  font-size: 13px;
+  color: var(--muted-color);
+}
+
+/* ================================
+   Toast
+================================= */
+.toast {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  background: #04232f;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: white;
+  z-index: 80;
+}
+
+/* ================================
+   Responsive
+================================= */
+@media (max-width: 900px) {
+  .right {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .search {
+    max-width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
